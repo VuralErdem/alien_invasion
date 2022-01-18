@@ -143,7 +143,7 @@ class AlienInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
-        print(len(self.bullets))
+        
 
         self._check_bullet_alien_collisions()
 
@@ -178,7 +178,7 @@ class AlienInvasion:
         #Prüft auf Kollisionen zwischen Invasoren und dem eigenen Schiff.
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
-            print("Ship hit!!!")
+            
 
         #Prüft auf Invasoren, die den unteren Bildschirmrand erreichen.
         self._check_aliens_bottom()
